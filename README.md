@@ -14,8 +14,7 @@ The better solution I've found was creating this image to run Ko on a Debian-bas
 docker run -i --name ko --rm \
   --network host \
   -e GOCACHE=/tmp/go-build \
-  -e KO_DOCKER_REPO=kind.local
-  \
+  -e KO_DOCKER_REPO=kind.local \
   -e KUBE_CONFIG=/root/.kube/config \
   -v /tmp/go-build:/tmp/go-build \
   -v /var/run/docker.sock:/var/run/docker.sock \
